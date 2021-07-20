@@ -1,6 +1,7 @@
 const express = require("express");
 const mongojs = require("mongojs");
 const mongoose = require("mongoose");
+
 // HTTP request logger middleware
 const logger = require("morgan");
 
@@ -14,6 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
+
+//Bind database
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
