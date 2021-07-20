@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 // HTTP request logger middleware
 const logger = require("morgan");
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8080
 
 const app = express();
 
@@ -24,7 +24,7 @@ app.use(require("./routes/apiRoutes"));
 app.use(require("./routes/htmlRoutes"));
 
 
-// Set the app to listen on port 3000
-app.listen(3000, () => {
-  console.log("App running on port 3000!");
+// Set the app to listen on port 8080
+app.listen(8080, () => {
+  console.log("App running on port 8080!");
 });
